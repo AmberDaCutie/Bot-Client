@@ -21,7 +21,7 @@ async function createWindow() {
 	};
 	var { session } = win.webContents;
 	session.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
-		details.requestHeaders["origin"] = "https://hummus.sys42.net";
+		details.requestHeaders["origin"] = "https://staging.oldcordapp.com";
 		delete details.requestHeaders["User-Agent"];
 		callback({ requestHeaders: details.requestHeaders });
 	});
