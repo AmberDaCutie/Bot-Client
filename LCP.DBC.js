@@ -8,17 +8,17 @@ const html = indexHTML;
 app.all('/d/*', function(req, res) {
   const str = req.originalUrl;
   const trs = str.slice('\x32');
-  req.pipe(request("https://hummus.sys42.net" + trs)).pipe(res);
+  req.pipe(request("https://staging.oldcordapp.com" + trs)).pipe(res);
 });
 app.all('/sticker*', function(req, res) {
   const str = req.originalUrl;
   const trs = str;
-  req.pipe(request("http://AmberDaCutie.GitHub.io" + trs)).pipe(res);
+  req.pipe(request("http://amberdacutie.GitHub.io" + trs)).pipe(res);
 });
 app.all('/asset*', function(req, res) {
   const str = req.originalUrl;
   const trs = str;
-  req.pipe(request("http://AmberDaCutie.GitHub.io" + trs)).pipe(res);
+  req.pipe(request("http://amberdacutie.GitHub.io" + trs)).pipe(res);
 });
 app.all("*", (req, res) => {
   res.send(html);
